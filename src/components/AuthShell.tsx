@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import type { Route } from 'next';
 import { ReactNode } from 'react';
 
 interface AuthShellProps {
@@ -8,7 +9,7 @@ interface AuthShellProps {
   subtitle: string;
   footer: {
     label: string;
-    link: { href: string; text: string };
+    link: { href: Route; text: string };
   };
   children: ReactNode;
 }
