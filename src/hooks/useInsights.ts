@@ -24,7 +24,6 @@ export function useInsights(page = 1, limit = 6) {
   const query = useQuery<InsightsResponse>({
     queryKey: ['insights', page, limit],
     queryFn: () => apiFetch(`/insights?page=${page}&limit=${limit}`),
-    keepPreviousData: true,
   });
 
   return {
