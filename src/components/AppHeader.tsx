@@ -1,12 +1,13 @@
 "use client";
 
 import Link from 'next/link';
+import type { Route } from 'next';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from './ThemeToggle';
 import { useAuth } from '@/hooks/useAuth';
 import { cn } from '@/lib/cn';
 
-const NAV_LINKS = [
+const NAV_LINKS: ReadonlyArray<{ href: Route; label: string }> = [
   { href: '/', label: 'Inicio' },
   { href: '/perfil', label: 'Mi perfil' },
   { href: '/diario', label: 'Rituales diarios' },
